@@ -122,7 +122,7 @@ apm install linter linter-eslint linter-tslint prettier-atom linter-scss-lint li
 #### linter-json-lint
 - allow comments
 
-#### VS Code:
+# VS Code:
 
 https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
 
