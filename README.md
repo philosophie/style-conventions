@@ -124,7 +124,10 @@ apm install linter linter-eslint linter-tslint prettier-atom linter-scss-lint li
 
 # VS Code:
 
-https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+* https://github.com/Microsoft/vscode-eslint
+* https://github.com/prettier/prettier-vscode
+* https://github.com/Microsoft/vscode-tslint
+* https://github.com/HookyQR/VSCodeBeautify
 
 ```
   "[javascriptreact]": {
@@ -135,7 +138,20 @@ https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
     "editor.rulers": [100],
     "editor.formatOnSave": true
   },
-  "prettier.requireConfig": true
+  "[typescript]": {
+    "editor.rulers": [100],
+    "editor.formatOnSave": true
+  },
+  "[html]": {
+    "editor.formatOnSave": true
+  },
+  "[scss]": {
+    "editor.formatOnSave": true
+  },
+  "prettier.requireConfig": true, // Only run Prettier if a config exists in project
+  "prettier.eslintIntegration": true, // Configure Prettier with eslint config if present
+  "prettier.tslintIntegration": true, // Configure Prettier with tslint config if present
+  "beautify.ignore": ["**/*.scss"] // Use Prettier for scss instead
 ```
 
 ## Other
