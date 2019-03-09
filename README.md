@@ -155,6 +155,13 @@ apm install linter linter-eslint linter-tslint prettier-atom linter-scss-lint li
 ```
 
 ### nice style sensitive search/replace and tab movement
+
+Install 2 extensions
+```
+(Ctrl+P): ext install Cardinal90.multi-cursor-case-preserve 
+(Ctrl+P): ext install vilicvane.sensitive-replace 
+```
+
 ```
 [
   {
