@@ -154,6 +154,71 @@ apm install linter linter-eslint linter-tslint prettier-atom linter-scss-lint li
   "beautify.ignore": ["**/*.scss"] // Use Prettier for scss instead
 ```
 
+### nice style sensitive search/replace and tab movement
+```
+[
+  {
+    "key": "f4",
+    "when": "!editorHasSelection",
+    "command": "actions.find"
+  },
+  {
+    "key": "ctrl+f",
+    "when": "!editorHasSelection",
+    "command": "actions.find"
+  },
+  {
+    "key": "f4",
+    "when": "editorHasSelection",
+    "command": "editor.action.selectHighlights"
+  },
+  {
+    "key": "ctrl+f",
+    "when": "editorHasSelection",
+    "command": "editor.action.selectHighlights"
+  },
+  {
+    "key": "f2",
+    "when": "!editorHasSelection",
+    "command": "editor.action.startFindReplaceAction"
+  },
+  {
+    "key": "ctrl+r",
+    "when": "!editorHasSelection",
+    "command": "editor.action.startFindReplaceAction"
+  },
+  {
+    "key": "f2",
+    "when": "editorHasSelection",
+    "command": "editor.action.replaceOne"
+  },
+  {
+    "key": "ctrl+r",
+    "when": "editorHasSelection",
+    "command": "editor.action.replaceOne"
+  },
+  {
+    "key": "f2",
+    "when": "editorHasMultipleSelections",
+    "command": "sensitive.replace"
+  },
+  {
+    "key": "ctrl+r",
+    "when": "editorHasMultipleSelections",
+    "command": "sensitive.replace"
+  },
+
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.previousEditor"
+  }
+]
+```
+
 ## Other
 
 Tidbits for other environments (WIP)...
