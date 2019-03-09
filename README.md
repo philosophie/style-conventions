@@ -162,6 +162,7 @@ Install 2 extensions
 (Ctrl+P): ext install vilicvane.sensitive-replace 
 ```
 
+Edit keybindings.json
 ```
 [
   {
