@@ -19,6 +19,19 @@ Check the following files in the project, along with package defaults (ie pretti
 - .jsbeautifyrc
 - .scss-lint.yml
 
+## ESlint
+### React
+The `.eslintrc.js` file in this repo has a sample default ESlint configuration for React projects. It uses the Airbnb JS styleguide. Note that this file can also be a `json` file, but will have to be reformatted accordingly.
+
+Install the following dependencies to use the ESlint configuration for React, with the Airbnb styleguide.
+
+```
+npm install --save-dev eslint babel-eslint \ 
+eslint-config-airbnb eslint-plugin-import \ 
+eslint-plugin-jsx-a11y eslint-plugin-node \
+eslint-plugin-promise eslint-plugin-react \
+```
+
 #### NOTE: several of these files are overridden by atom config, but useful for commandline calls, and should reflect atom config
 
 # Useful commandline stuff
@@ -39,6 +52,12 @@ js-beautify -r --config .jsbeautifyrc **/*.html
 scss-lint -c .scss-lint.yml **/*.scss
 ```
 Note this will only output issues and not modify files.
+
+#### Run ESlint
+Adjust file extensions and directories in this command to match which files you want to lint.
+```
+eslint --ext .js src --ext .jsx src
+```
 
 # Atom
 
