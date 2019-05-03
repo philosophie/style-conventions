@@ -18,6 +18,7 @@ Check the following files in the project, along with package defaults (ie pretti
 - .prettierrc
 - .jsbeautifyrc
 - .scss-lint.yml
+- setup.cfg
 
 #### NOTE: several of these files are overridden by atom config, but useful for commandline calls, and should reflect atom config
 
@@ -39,6 +40,13 @@ js-beautify -r --config .jsbeautifyrc **/*.html
 scss-lint -c .scss-lint.yml **/*.scss
 ```
 Note this will only output issues and not modify files.
+
+#### Reformat all python files in a project using autopep8
+```
+autopep8 --in-place -a **/*.py
+```
+Note this uses level 1 aggressive so make sure to reflect that in your editor config.
+
 
 # Atom
 
@@ -151,7 +159,8 @@ apm install linter linter-eslint linter-tslint prettier-atom linter-scss-lint li
   "prettier.requireConfig": true, // Only run Prettier if a config exists in project
   "prettier.eslintIntegration": true, // Configure Prettier with eslint config if present
   "prettier.tslintIntegration": true, // Configure Prettier with tslint config if present
-  "beautify.ignore": ["**/*.scss"] // Use Prettier for scss instead
+  "beautify.ignore": ["**/*.scss"], // Use Prettier for scss instead
+  "python.formatting.autopep8Args": ["--aggressive"] // Use level 1 agressiveness when reformatting python
 ```
 
 ### nice style sensitive search/replace and tab movement
