@@ -32,6 +32,11 @@ eslint-plugin-jsx-a11y eslint-plugin-node \
 eslint-plugin-promise eslint-plugin-react \
 ```
 
+For yarn
+```
+yarn add --dev eslint babel-eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-node eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks
+```
+
 #### NOTE: several of these files are overridden by atom config, but useful for commandline calls, and should reflect atom config
 
 # Useful commandline stuff
